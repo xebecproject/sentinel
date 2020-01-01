@@ -1,10 +1,10 @@
-# Dash Sentinel
+# Xebec Sentinel
 
-[![Build Status](https://travis-ci.org/dashpay/sentinel.svg?branch=master)](https://travis-ci.org/dashpay/sentinel)
+[![Build Status](https://travis-ci.org/xebecproject/sentinel.svg?branch=master)](https://travis-ci.org/xebecproject/sentinel)
 
-> An automated governance helper for Dash Masternodes.
+> An automated governance helper for Xebec Masternodes.
 
-Sentinel is an autonomous agent for persisting, processing and automating Dash governance objects and tasks. It is a Python application which runs alongside the DashCore instance on each Dash Masternode.
+Sentinel is an autonomous agent for persisting, processing and automating Xebec governance objects and tasks. It is a Python application which runs alongside the XebecCore instance on each Xebec Masternode.
 
 ## Table of Contents
 - [Install](#install)
@@ -31,15 +31,15 @@ Update system packages and ensure virtualenv is installed:
     $ sudo apt-get update
     $ sudo apt-get -y install python-virtualenv
 
-Make sure the local DashCore daemon running is at least version 12.1 (120100)
+Make sure the local XebecCore daemon running is at least version 12.1 (120100)
 
-    $ dash-cli getinfo | grep version
+    $ xebec-cli getinfo | grep version
 
 ### Install Sentinel
 
 Clone the Sentinel repo and install Python dependencies.
 
-    $ git clone https://github.com/dashpay/sentinel.git && cd sentinel
+    $ git clone https://github.com/xebecproject/sentinel.git && cd sentinel
     $ virtualenv ./venv
     $ ./venv/bin/pip install -r requirements.txt
 
@@ -63,13 +63,13 @@ Test the config by running tests:
 
     $ ./venv/bin/py.test ./test
 
-With all tests passing and crontab setup, Sentinel will stay in sync with dashd and the installation is complete
+With all tests passing and crontab setup, Sentinel will stay in sync with xebecd and the installation is complete
 
 ## Configuration
 
-An alternative (non-default) path to the `dash.conf` file can be specified in `sentinel.conf`:
+An alternative (non-default) path to the `xebec.conf` file can be specified in `sentinel.conf`:
 
-    dash_conf=/path/to/dash.conf
+    xebec_conf=/path/to/xebec.conf
 
 ## Troubleshooting
 
@@ -83,11 +83,11 @@ To view debug output, set the `SENTINEL_DEBUG` environment variable to anything 
 
 ## Contributing
 
-Please follow the [DashCore guidelines for contributing](https://github.com/dashpay/dash/blob/master/CONTRIBUTING.md).
+Please follow the [XebecCore guidelines for contributing](https://github.com/xebecproject/xebec/blob/master/CONTRIBUTING.md).
 
 Specifically:
 
-* [Contributor Workflow](https://github.com/dashpay/dash/blob/master/CONTRIBUTING.md#contributor-workflow)
+* [Contributor Workflow](https://github.com/xebecproject/xebec/blob/master/CONTRIBUTING.md#contributor-workflow)
 
     To contribute a patch, the workflow is as follows:
 
@@ -101,4 +101,4 @@ Specifically:
 
 ## License
 
-Released under the MIT license, under the same terms as DashCore itself. See [LICENSE](LICENSE) for more info.
+Released under the MIT license, under the same terms as XebecCore itself. See [LICENSE](LICENSE) for more info.
